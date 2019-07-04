@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>        
+            .wrapper{
+                width: 960px;
+                margin: auto;
+                border: 0;
+                padding: 10px;
+                background:darkcyan;
+                height: 650px;
+            }
+            .td{
+                background: #5787d3;
+                padding: 10px;
+                border-radius: 5px;
+                color:yellow;
+                font-size: 30px;
+                text-align: center;
+            }
+            
+    </style>
+</head>
+<body style="background-color: burlywood">
+        <div class="wrapper">
+                <div class="td">
+                    Thực hành Kiểm Tra Năm Nhuận
+                    <h4> Nguyễn Quốc Báo - C0619G </h4>
+                </div>
+                <div class="container m-5">
+                      <center><h1 id="result" style="color:darkmagenta;"></h1></center>
+                </div>
+          </div>
+    <script>
+        let year = parseInt(prompt('Enter a year : ')) ;
+        let isLeapYear = false;
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                if (year % 400 == 0) {
+                isLeapYear = true;
+                }
+            }else {
+                isLeapYear = true;
+            }
+        }
+
+        if (isLeapYear) {
+            alert(year + " is a leap year");
+            document.getElementById("result").innerHTML ="Năm " +year+ " Là năm nhuận ";
+        } else {
+            alert(year + " is NOT a leap year");
+            document.getElementById("result").innerHTML ="Năm " +year+ " Không phải là năm nhuận";
+        } 
+    </script>
+</body>
+</html>
