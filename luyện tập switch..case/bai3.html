@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>        
+            .wrapper{
+                width: 960px;
+                margin: auto;
+                border: 0;
+                padding: 10px;
+                background:darkcyan;
+                height: 650px;
+            }
+            .td{
+                background: #5787d3;
+                padding: 10px;
+                border-radius: 5px;
+                color:yellow;
+                font-size: 30px;
+                text-align: center;
+            }
+            
+    </style>
+</head>
+<body style="background-color: burlywood">
+        <div class="wrapper">
+                <div class="td">
+                    <h2>[Thực hành] Luyện tập SWITCH..CASE !!</h2>
+                    <h4> Nguyễn Quốc Báo - C061 9G1 </h4>
+                </div>
+                <div id="demo"  style="color:black; font-size: 28px "><center>Note :Switch..case chỉ áp dụng được so sánh bằng với các giá trị cố đinh<br>đối với bài toán không thể áp dụng được cái so sánh lớn bé khác ngoài -5,-1,0,1,5<br></center>
+        
+                </div>
+                
+          </div>
+          
+    <script>
+        let value = +prompt("Type a number", 0) ;
+        
+        switch (value){
+            case 1:
+            case 5:
+                alert("1");
+                break;
+            case -1:
+            case -5:
+                alert('-1');
+                break;           
+            default:
+                alert('0');
+
+        }
+        
+        
+    </script>
+</body>
+</html>
