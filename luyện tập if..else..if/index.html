@@ -28,32 +28,34 @@
 <body style="background-color: burlywood">
         <div class="wrapper">
                 <div class="td">
-                    Thực hành Kiểm Tra Năm Nhuận
+                    <h2>[Thực hành] luyện tập IF..ELSE..IF !!</h2>
                     <h4> Nguyễn Quốc Báo - C0619G1 </h4>
                 </div>
                 <div>
                       <center><h1 id="result" style="color:darkmagenta;"></h1></center>
                 </div>
-        </div>
+          </div>
     <script>
-        let year = parseInt(prompt('Enter a year : ')) ;
-        let isLeapYear = false;
-        if (year % 4 == 0) {
-            if (year % 100 == 0) {
-                if (year % 400 == 0) {
-                isLeapYear = true;
-                }
-            }else {
-                isLeapYear = true;
-            }
-        }
-
-        if (isLeapYear) {
-            alert(year + " is a leap year");
-            document.getElementById("result").innerHTML ="Năm " +year+ " Là năm nhuận ";
+        let username = prompt("Who's There?") ;
+        
+        if (username =='Admin'){
+            alert('Wellcome');
+        } 
+        else if (username == null){
+            alert('Canceled');
+        } else alert ('I dont know you');   
+        let pass = prompt('Password?');    
+        if (pass == 'TheMaster'){
+            alert('Wellcome');
+        }else if (pass == null){
+            alert('Canceled');
+        }else alert('Wrong password');
+        if (username =='Admin' && pass =='TheMaster') {
+            
+            document.getElementById("result").innerHTML ='Wellcome';
         } else {
-            alert(year + " is NOT a leap year");
-            document.getElementById("result").innerHTML ="Năm " +year+ " Không phải là năm nhuận";
+            alert('Try Again!');
+            document.getElementById("result").innerHTML ='Try Again!';
         } 
     </script>
 </body>
