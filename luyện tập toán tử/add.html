@@ -21,40 +21,23 @@
                 color:yellow;
                 font-size: 30px;
                 text-align: center;
-            }
-            
+            }           
     </style>
 </head>
 <body style="background-color: burlywood">
         <div class="wrapper">
                 <div class="td">
-                    <h2>[Thực hành] Luyện tập SWITCH..CASE !!</h2>
+                    <h2>[Thực hành] Luyện tập với Toán Tử !!</h2>
                     <h4> Nguyễn Quốc Báo - C0619G1 </h4>
                 </div>
-                <div id="demo"  style="color:black; font-size: 28px "><center>Note :Switch..case chỉ áp dụng được so sánh bằng với các giá trị cố đinh<br>đối với bài toán không thể áp dụng được cái so sánh lớn bé khác ngoài -5,-1,0,1,5<br></center>
-        
-                </div>
-                
-          </div>
-          
+                <div id="demo" style="font-size: 40px; text-align: center"></div>
+        </div>        
     <script>
-        let value = +prompt("Type a number", 0) ;
-        
-        switch (value){
-            case 1:
-            case 5:
-                alert("1");
-                break;
-            case -1:
-            case -5:
-                alert('-1');
-                break;           
-            default:
-                alert('0');
-
-        }
-        
-        
+        let a = +prompt("Input A: ") ;
+        let b = +prompt("Input B: ") ;
+        let result = (a + b < 4) ? 'Below' : 'Over';
+        alert(result);
+        document.getElementById("demo").innerHTML = '' + result;             
     </script>
 </body>
 </html>
