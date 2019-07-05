@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>        
+            .wrapper{
+                width: 960px;
+                margin: auto;
+                border: 0;
+                padding: 10px;
+                background:darkcyan;
+                height: 650px;
+            }
+            .td{
+                background: #5787d3;
+                padding: 10px;
+                border-radius: 5px;
+                color:yellow;
+                font-size: 30px;
+                text-align: center;
+            }
+
+            img.cangiua{
+                display: block;
+                margin-left: 650px;
+                margin-top: 250px;
+            }
+            
+    </style>
+</head>
+<body style="background-color: burlywood" onload="doReady()" >
+        <div class="wrapper">
+                <div class="td">
+                    [Thực hành] Sự kiện Bàn Phím 
+                    <h4> Nguyễn Quốc Báo - C0619G1 </h4>
+                </div>
+                <div>
+                      <center><h1 id="result" style="color:darkmagenta;"></h1></center>
+                      <img class="cangiua" id="nobita" src="image/nobita.jpg" style="position:absolute;left:0; top:0;" height="100" width="80" />
+                </div>
+        </div>
+        
+    <script>
+        
+        function upArrowPresed() {
+            let element = document.getElementById("nobita");
+            element.style.top = parseInt(element.style.top) - 5+'px';      
+        }
+        function downArrowPresed() {
+            let element = document.getElementById("nobita");
+            element.style.top = parseInt(element.style.top) + 5 + 'px';
+        }
+        function leftArrowPresed () {
+            let element = document.getElementById("nobita");
+            element.style.left = parseInt(element.style.left) - 5 + 'px';
+        }
+        function rightArrowPresed () {
+            let element = document.getElementById("nobita");
+            element.style.left = parseInt(element.style.left) + 5 + 'px';
+        }
+        function moveSelection(evt) {
+            switch (evt.keyCode) {
+                case  37:
+                    leftArrowPresed();
+                    break;
+                case  39:
+                    rightArrowPresed();
+                    break;
+                case  38:
+                    upArrowPresed();
+                    break;
+                case 40:
+                    downArrowPresed();
+                    break;
+            }
+        }
+        function doReady (){
+            window.addEventListener('keydown', moveSelection);
+        }
+    </script>
+</body>
+</html>
