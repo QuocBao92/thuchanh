@@ -28,33 +28,24 @@
 <body style="background-color: burlywood">
         <div class="wrapper">
                 <div class="td">
-                    Thực hành Kiểm Tra Năm Nhuận
+                    Thực hành Luyện tập cấu trúc IF ELSE !
                     <h4> Nguyễn Quốc Báo - C0619G1 </h4>
                 </div>
-                <div 
+                <div> 
                       <center></div><h1 id="result" style="color:darkmagenta;"></h1></center>
                 </div>
-          </div>
+            
+        </div>
     <script>
-        let year = parseInt(prompt('Enter a year : ')) ;
-        let isLeapYear = false;
-        if (year % 4 == 0) {
-            if (year % 100 == 0) {
-                if (year % 400 == 0) {
-                isLeapYear = true;
-                }
-            }else {
-                isLeapYear = true;
-            }
-        }
-
-        if (isLeapYear) {
-            alert(year + " is a leap year");
-            document.getElementById("result").innerHTML ="Năm " +year+ " Là năm nhuận ";
-        } else {
-            alert(year + " is NOT a leap year");
-            document.getElementById("result").innerHTML ="Năm " +year+ " Không phải là năm nhuận";
+        let value = prompt('what is the "official" name of Javascript,?');
+        if (value == 'ECMAScript'){
+            alert('right');
+            document.getElementById('result').innerHTML="Congratulaion !";
         } 
+        else {
+            alert('You dont know? ECMAScript! ');
+            document.getElementById('result').innerHTML="You don't know? ECMAScript!";
+        }
     </script>
 </body>
 </html>
