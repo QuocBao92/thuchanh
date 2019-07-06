@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>        
+            .wrapper{
+                width: 960px;
+                margin: auto;
+                border: 0;
+                padding: 10px;
+                background:darkcyan;
+                height: 650px;
+            }
+            .td{
+                background: #5787d3;
+                padding: 10px;
+                border-radius: 5px;
+                color:yellow;
+                font-size: 30px;
+                text-align: center;
+            }
+
+            img.cangiua{
+                display: block;
+                margin-left: 870px;
+                margin-top: 230px;
+            }
+            #text{
+                position: absolute;
+                top: 461px;
+                left: 393px;
+                font-size: 30px;
+                color: white;
+            }
+            #input-text{
+                position: absolute;
+                top: 539px;
+                left: 600px;
+                font-size: 30px;
+            }
+            
+    </style>
+</head>
+<body style="background-color: burlywood" onload="doReady()" >
+        <div class="wrapper">
+                <div class="td">
+                    [Thực hành] Sự kiện Chuột
+                    <h4> Nguyễn Quốc Báo - C0619G1 </h4>
+                </div>
+
+                <form>
+                    <center><h1 id="result" style="color:darkmagenta;"></h1></center>
+                    <img class="cangiua" id="bong" src="image/bong.jpg" style="position:absolute;left:0; top:0;"  width="200" />
+                    <h3 id="text">Click button below to move the image to right</h3>
+                    <input id="input-text" class="1" type="button" value="Click Me" onclick="moveRight()"; />
+                </form>
+        </div>
+        
+    <script>
+        let imgObj = null;
+        imgObj = document.getElementById("bong");
+
+        function init() {
+            imgObj = document.getElementById("bong");
+            imgObj.style.position = 'relative';
+            imgObj.style.left = '-500px';
+            imgObj.style.top = '-200px';
+        }
+
+        function moveRight() {
+            imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+        }
+
+        window.onload = init;
+
+    </script>
+</body>
+</html>
