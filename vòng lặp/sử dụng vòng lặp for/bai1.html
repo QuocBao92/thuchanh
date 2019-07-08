@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrapper{
+                width: 960px;
+                margin: auto;
+                border: 0;
+                padding: 10px;
+                background:darkcyan;
+                height: 650px;
+        }
+        .myname {
+            text-align: center;
+            color:darkslateblue;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body style="background-color: burlywood">
+        <div class="wrapper">
+            <div class="myname">
+                <h2>[Thực hành] Sử dụng vòng lặp for !</h2>
+                <h4> Nguyễn Quốc Báo C0619G1 </h4>
+
+            </div>
+            <div class="noidung">
+                <fieldset>
+                    <legend>bài 1</legend>
+                    <p id="1"> </p>
+                </fieldset>
+                <fieldset>
+                    <legend>bài 2</legend>
+                    Nhập số : <br>
+                    <input type="text" id="num" value=""> 
+                    <input type="button" id="tinh" value="Tính tổng" onclick="tinhtong()">
+                    <p id="2"></p>
+                </fieldset>
+            </div>
+        </div>
+
+        <script>
+            let i = 0;
+            let text = '';
+            for (i=0; i < 5;i++){
+                text += "The number is "+i+"<br>";
+            }
+            document.getElementById('1').innerHTML = text;
+
+            function tinhtong(){
+            
+                let sum = 0;
+                let number = +document.getElementById('num').value;
+                let i = 1;
+                for ( i = 1; i <= number; i++) {
+                    sum = sum + i;
+                }
+                document.getElementById('2').innerHTML = 'Tổng từ 1 đến '+number+ ' là: '  +sum;
+            }
+        </script>
+</body>
+</html>
