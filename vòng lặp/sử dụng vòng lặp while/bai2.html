@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrapper{
+                width: 960px;
+                margin: auto;
+                border: 0;
+                padding: 10px;
+                background:darkcyan;
+                height: 650px;
+        }
+        .myname {
+            text-align: center;
+            color:darkslateblue;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body style="background-color: burlywood">
+        <div class="wrapper">
+            <div class="myname">
+                <h2>[Thực hành] Sử dụng vòng lặp While !</h2>
+                <h4> Nguyễn Quốc Báo C0619G1 </h4>
+
+            </div>
+            <div class="noidung">
+                <fieldset>
+                    <legend>bài 2</legend>
+                    
+                    
+                    <p id="inketqua">KQ cua tui</p>
+                </fieldset>
+                
+            </div>
+        </div>
+
+        <script>
+           
+            let choinkq = document.getElementById('inketqua');
+            let ketqua = '';
+            let i = 1;
+
+                while (i < 50) {
+                    //phân thân vòng lặp
+                    ketqua += "<hr width = " + i + "%>"
+                //    document.write();
+                    i++;
+                }
+            
+            choinkq.innerHTML = ketqua;
+            
+            
+        </script>
+</body>
+</html>
