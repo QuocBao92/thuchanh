@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            width: 1050px;
+            margin: auto;
+            border: 0;
+            padding: 10px;
+            background: darkcyan;
+            height: 800px;
+        }
+        .myname {
+            text-align: center;
+            color:darkslateblue;
+            font-size: 20px;
+        }
+        .kq {
+            color: black ;
+            text-align: center;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body style="background-color: burlywood">
+        <div class="wrapper">
+            <div class="myname">
+                <h2>[Thực hành] Sử dụng vòng lặp Lồng nhau!</h2>
+                <h3> Nguyễn Quốc Báo C0619G1 </h3>
+
+            </div>
+            <div class="noidung">
+                <fieldset>
+                    <legend>Sử dụng for</legend>                     
+                    <div id="inketqua1" class="kq"></div>
+                </fieldset>
+                <fieldset>
+                        <legend>Sử dụng while</legend>                    
+                        <div id="inketqua2" class="kq"></div>
+                </fieldset>
+                
+            </div>
+        </div>
+        
+
+        <script>
+            let choinkq = document.getElementById('inketqua1');
+            
+            let table = "<table border='1' width='300' cellspacing='0' cellpadding='3'>" ;
+             for (let i = 1; i <= 10; i++) {
+                table = table + "<tr>";
+                 for (let j = 1; j <= 10; j++) {
+                     table = table + "<td>" + (i*j) + "</td>";
+                 }
+                 table = table + "</tr>";
+                
+                 
+             }
+
+             table = table + "</table>";
+            
+            choinkq.innerHTML = table;
+
+            let i2, j2 ;
+            let choinkq2 = document.getElementById('inketqua2');
+            let table2 = "<table border='1' width='300' cellspacing='0' cellpadding='3'>" ;
+            i2 = j2 = 1
+            while (i2<= 10){
+
+                table2 = table2 + "<tr>";
+
+                while (j2 <= 10){
+                    table2 = table2 + "<td>" + (i2*j2) + "</td>";
+                    j2++;
+                }
+
+                table2 = table2 + "</tr>";
+                j2 = 1;
+                i2++;
+            }
+
+            table2 = table2 + "</table>";
+            choinkq2.innerHTML = table2;
+        </script>
+</body>
+</html>
