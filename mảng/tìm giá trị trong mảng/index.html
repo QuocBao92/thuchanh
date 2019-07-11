@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>        
+            .wrapper{
+                width: 960px;
+                margin: auto;
+                border: 0;
+                padding: 10px;
+                background:darkcyan;
+                height: 650px;
+            }
+            .name{
+                background: #5787d3;
+                padding: 10px;
+                border-radius: 5px;
+                color:rgb(169, 238, 31);
+                font-size: 30px;
+                text-align: center;
+            }
+            .nd {
+                text-align: center;
+                font-size: 30px;
+                color:salmon;
+                font-weight: bold;
+            }
+    
+            
+    </style>
+</head>
+<body style="background-color:indianred">
+    <div class="wrapper">
+        <div class="name">
+            <h2>[Thực Hành] Tìm giá trị trong mảng !!</h2>
+            <h4> Nguyễn Quốc Báo C0619G1 </h4>
+        </div>
+        <div class="nd">
+
+                    
+                    <div id="dauvao"></div>
+                    <div id="result"></div>
+                
+        </div>
+    
+    <script>
+        let value = parseInt(prompt('Input number!'));
+        
+        let  x = [-3, 2, 3, 5, 2, 3];
+        let result = '';
+        let gt = 0;
+        let vt = '';
+        
+        console.log(x);
+        for (let i =0; i< x.length;i++){
+           
+                if (value === x[i]){
+                    gt = x[i];
+                    vt +=  i+1 + ' ';
+                    
+                }
+            
+        }
+   
+            if (gt === 0){
+                result +="Giá trị nhập vào "+ value+ " không nằm trong mảng!";  
+            }else{
+                result += "Giá trị nhập vào "+ gt+ " nằm trong mảng ở vị trí " +vt ; 
+            }
+        
+        document.getElementById('dauvao').innerHTML= 'Mảng gồm :'+x;
+        document.getElementById('result').innerHTML=result;
+    
+        
+    </script>
+</body>
+</html>

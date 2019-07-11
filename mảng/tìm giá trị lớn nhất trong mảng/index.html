@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>        
+            .wrapper{
+                width: 960px;
+                margin: auto;
+                border: 0;
+                padding: 10px;
+                background:darkcyan;
+                height: 650px;
+            }
+            .name{
+                background: #5787d3;
+                padding: 10px;
+                border-radius: 5px;
+                color:rgb(169, 238, 31);
+                font-size: 30px;
+                text-align: center;
+            }
+            .nd {
+                text-align: center;
+                font-size: 30px;
+                color:salmon;
+                font-weight: bold;
+            }
+    
+            
+    </style>
+</head>
+<body style="background-color:indianred">
+    <div class="wrapper">
+        <div class="name">
+            <h2>[Thực Hành] Tìm giá trị lớn nhất trong mảng !!</h2>
+            <h4> Nguyễn Quốc Báo C0619G1 </h4>
+        </div>
+        <div class="nd">
+                <h4>Nhập giá trị cho mảng!!</h4>
+                <input type="text" value="" id="nhap">
+                <input type="button" id="btnAdd" value="Thêm" onclick="add()">
+                <input type="button" id="btnResult" value="Xem kết quả" onclick="ketqua()">
+                    
+                    <div id="dauvao"></div>
+                    <div id="result"></div>
+                
+        </div>
+    
+    <script>
+        
+
+        let x = 0;
+        let mang = new Array();
+
+        function add(){
+            mang[x] = +document.getElementById('nhap').value;
+            if (!isSecureContext(mang[x])){
+                alert("Element "+mang[x]+ " Added at index " + x);
+                x++;
+                document.getElementById('nhap').value = "";
+            }else{alert('Nhập lại không phải là số');
+            }
+        }
+
+        
+        function ketqua(){
+            let value = 0 ;
+            max = mang[0]
+            for(let i = 0;i <mang.length ;i++){
+                
+                if (mang[i] > max){
+                    max = mang[i];
+                    value = i;
+                }
+            }
+            document.getElementById('dauvao').innerHTML= 'Mảng gồm :'+mang;
+            document.getElementById('result').innerHTML='giá trị lớn nhất: ' + max+ ' tại vị trí thứ '+ (value+1);
+        }
+        
+
+        
+    </script>
+</body>
+</html>
