@@ -2,7 +2,7 @@ let b = document.getElementById("dauvao");
 let board = [];
 var data = "";
 for (let i = 0; i < 5; i++) {
-    board[i] = new Array(0, 0, 0, 0, 0);
+    board[i] = new Array(".", ".", ".", ".", ".");
 }
 data += "<table style='margin:0px auto' border='1' width='300' cellspacing='0' cellpadding='3'>"
 for (let i = 0; i < 5; i++) {

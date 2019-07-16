@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+            body{
+                background: #c8d8ee;
+            }       
+            .wrapper{
+                width: 960px;
+                margin: auto;
+                border: 0;
+                padding: 10px;
+                background: #eef2fb;
+                height: auto;
+            }
+            .name{
+                background: #5787d3;
+                padding: 10px;
+                border-radius: 5px;
+                color: azure;
+                font-size: 30px;
+                text-align: center;
+            }       
+        </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="name">
+            [Thực hành] chuyển đổi nhiệt độ !!
+            <h5>Nguyễn Quốc Báo - C0619G1</h5>
+        </div>
+        <div class="container">
+            <center><h2>Temperature Converter</h2></center>
+            <form style="text-align: center; font-size: 25px;">
+                <legend>Bài làm</legend>
+                <div>Type a value in the Fahrenheit field to convert the value to Celcius:</div>
+                <div>Fahrenheit :
+                    <input type="number" id="fahrenheit" value="1">
+                    <input type="button" name="convert" id="convert" value="Convert" onclick="convertTemperature()">
+                </div>
+                <div id="result"></div>
+            </form>
+        </div>
+    </div>
+    <script>
+        
+        function convertTemperature(){
+            let temperatureF = document.getElementById('fahrenheit').value;
+            console.log(temperatureF);
+            let temperatureC = (temperatureF -32)/1.8000;
+            console.log(temperatureC);
+            document.getElementById('result').innerHTML ="Celcius : "+temperatureC;  
+        }
+
+    </script>
+</body>
+</html>
