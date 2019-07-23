@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[Thực hành] Check ZIP CODE USA ?  </title>
+    <style>
+        body{
+            background: #c8d8ee;
+        }       
+        .wrapper{
+            width: 960px;
+            margin: auto;
+            border: 0;
+            padding: 10px;
+            background: #eef2fb;
+            height: auto;
+        }
+        .name{
+            background: #5787d3;
+            padding: 10px;
+            border-radius: 5px;
+            color: azure;
+            font-size: 30px;
+            text-align: center;
+        }  
+        #result {
+            font-size: 25px;   
+            font-family: Tahoma, Verdana, Geneva, sans-serif
+        }     
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="name">
+                [Thực hành] Check ZIP CODE USA ?  
+            <h5>Nguyễn Quốc Báo - C0619G1</h5>
+        </div>
+        <div class="container mt-5">       
+            <fieldset class="border p-3">
+                <legend>Bài Làm</legend>
+                <input type="text" value="" id="msg"> <br><br>
+                <input type="button"  id="checkZipCode" onclick="is_usZipCode()" value="Kiểm Tra"><br> <br>
+                <div id="result"></div>
+            </fieldset>         
+        </div>
+    </div>
+    <script>
+        let regExp = /^[0-9]{5}(?:-[0-9]{4})?$/; 
+        function is_usZipCode (){
+            let str = document.getElementById('msg').value;
+            if(regExp.test(str)){
+                document.getElementById('result').innerHTML = "That's right! is USA Zip Code";
+            } else {
+                document.getElementById('result').innerHTML = "is not USA Zip Code!! Try again";
+            }
+        }  
+    </script>
+</body>
+</html>
